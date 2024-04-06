@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodlytics</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Moodlytics: Sleep & Exercise Tracking</h1>
+    <form id="moodlyticsForm">
+        <label for="sleepHours">Hours of Sleep:</label>
+        <input type="number" id="sleepHours" name="sleepHours" min="0" step="0.5" placeholder="Enter hours of sleep">
+
+        <label for="exerciseType">Type of Exercise:</label>
+        <select id="exerciseType" name="exerciseType">
+            <option value="running">Running</option>
+            <option value="cycling">Cycling</option>
+            <option value="swimming">Swimming</option>
+            <option value="yoga">Yoga</option>
+            <!-- Add more exercise options as needed -->
+        </select>
+
+        <label for="exerciseDuration">Duration (minutes):</label>
+        <input type="number" id="exerciseDuration" name="exerciseDuration" min="0" step="5" placeholder="Enter exercise duration (minutes)">
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <!-- Script to handle form submission -->
+    <script>
+        function submitForm() {
+            // Get the values entered by the user
+            var sleepHours = document.getElementById('sleepHours').value;
+            var exerciseType = document.getElementById('exerciseType').value;
+            var exerciseDuration = document.getElementById('exerciseDuration').value;
+
+            // Perform any additional actions here, such as sending the data to a server or saving it locally
+            
+            // For demonstration purposes, log the data to the console
+            console.log('Sleep Hours:', sleepHours);
+            console.log('Exercise Type:', exerciseType);
+            console.log('Exercise Duration:', exerciseDuration);
+
+            // You can redirect the user to another page or display a confirmation message here
+        }
+    </script>
+</body>
+</html>
