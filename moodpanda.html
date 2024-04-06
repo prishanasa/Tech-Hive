@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Daily Mood Tracker</h1>
+    <form id="moodForm">
+        <label for="mood">How do you feel today?</label>
+        <select id="mood" name="mood">
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="angry">Angry</option>
+            <option value="calm">Calm</option>
+            <!-- Add more mood options as needed -->
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Script to handle form submission -->
+    <script>
+        document.getElementById('moodForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get the selected mood
+            var mood = document.getElementById('mood').value;
+
+            // Perform any additional actions here, such as sending the mood data to a server or saving it locally
+            
+            // For demonstration purposes, log the selected mood to the console
+            console.log('Selected mood:', mood);
+
+            // You can redirect the user to another page or display a confirmation message here
+        });
+    </script>
+</body>
+</html>
