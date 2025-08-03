@@ -1,3 +1,3 @@
-#MENTAL HEALTH WEBSITE-peaceful pathsth
+#MENTAL HEALTH WEBSITE-peaceful paths
 
 html
